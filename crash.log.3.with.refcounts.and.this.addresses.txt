@@ -1,0 +1,565 @@
+-*- mode: compilation; default-directory: "~/go/src/github.com/glycerine/fdb_demo_golang/kvfile/" -*-
+Compilation started at Wed Jan  1 15:15:47
+
+go test -v 
+=== RUN   Test001_fdb_set_and_get_single_keys
+ThreadSafeDatabase refcount increased: 1 -> 2 (this: 0x600003e1c000)
+ThreadSafeDatabase refcount increased: 2 -> 3 (this: 0x600003e1c000)
+ThreadSafeDatabase refcount decreased: 3 -> 2 (this: 0x600003e1c000)
+
+db.go:114 2025-01-01T15:15:48.221Z opened tenant/namespace: 'jason/kvfile_test/' -> ten='fdb.Tenant{tenant:(*fdb.tenant)(0xc00011a288), db:fdb.Database{clusterFile:"", isCached:true, database:(*fdb.database)(0xc00011a238)}}'
+ThreadSafeDatabase refcount increased: 2 -> 3 (this: 0x600003e1c000)
+ThreadSafeDatabase refcount increased: 3 -> 4 (this: 0x600003e1c000)
+ThreadSafeDatabase refcount decreased: 4 -> 3 (this: 0x600003e1c000)
+
+db.go:114 2025-01-01T15:15:48.223Z opened tenant/namespace: 'jason/kvfile_test/' -> ten='fdb.Tenant{tenant:(*fdb.tenant)(0xc000202038), db:fdb.Database{clusterFile:"", isCached:true, database:(*fdb.database)(0xc00011a238)}}'
+ThreadSafeDatabase refcount increased: 3 -> 4 (this: 0x600003e1c000)
+ThreadSafeDatabase refcount increased: 4 -> 5 (this: 0x600003e1c000)
+ThreadSafeDatabase refcount decreased: 5 -> 4 (this: 0x600003e1c000)
+
+db.go:114 2025-01-01T15:15:48.225Z opened tenant/namespace: 'jason/kvfile_test/' -> ten='fdb.Tenant{tenant:(*fdb.tenant)(0xc0002020e8), db:fdb.Database{clusterFile:"", isCached:true, database:(*fdb.database)(0xc00011a238)}}'
+ThreadSafeDatabase refcount increased: 4 -> 5 (this: 0x600003e1c000)
+ThreadSafeDatabase refcount increased: 5 -> 6 (this: 0x600003e1c000)
+ThreadSafeDatabase refcount decreased: 6 -> 5 (this: 0x600003e1c000)
+
+db.go:114 2025-01-01T15:15:48.272Z opened tenant/namespace: 'jason/kvfile_test/' -> ten='fdb.Tenant{tenant:(*fdb.tenant)(0xc000014108), db:fdb.Database{clusterFile:"", isCached:true, database:(*fdb.database)(0xc00011a238)}}'
+ThreadSafeDatabase refcount increased: 5 -> 6 (this: 0x600003e1c000)
+ThreadSafeDatabase refcount increased: 6 -> 7 (this: 0x600003e1c000)
+ThreadSafeDatabase refcount decreased: 7 -> 6 (this: 0x600003e1c000)
+
+db.go:114 2025-01-01T15:15:48.277Z opened tenant/namespace: 'jason/kvfile_test/' -> ten='fdb.Tenant{tenant:(*fdb.tenant)(0xc0000141b8), db:fdb.Database{clusterFile:"", isCached:true, database:(*fdb.database)(0xc00011a238)}}'
+ThreadSafeDatabase refcount increased: 6 -> 7 (this: 0x600003e1c000)
+ThreadSafeDatabase refcount increased: 7 -> 8 (this: 0x600003e1c000)
+ThreadSafeDatabase refcount decreased: 8 -> 7 (this: 0x600003e1c000)
+
+db.go:114 2025-01-01T15:15:48.322Z opened tenant/namespace: 'jason/kvfile_test/' -> ten='fdb.Tenant{tenant:(*fdb.tenant)(0xc000202178), db:fdb.Database{clusterFile:"", isCached:true, database:(*fdb.database)(0xc00011a238)}}'
+ThreadSafeDatabase refcount increased: 7 -> 8 (this: 0x600003e1c000)
+ThreadSafeDatabase refcount increased: 8 -> 9 (this: 0x600003e1c000)
+ThreadSafeDatabase refcount decreased: 9 -> 8 (this: 0x600003e1c000)
+
+db.go:114 2025-01-01T15:15:48.324Z opened tenant/namespace: 'jason/kvfile_test/' -> ten='fdb.Tenant{tenant:(*fdb.tenant)(0xc000202228), db:fdb.Database{clusterFile:"", isCached:true, database:(*fdb.database)(0xc00011a238)}}'
+ThreadSafeDatabase refcount increased: 8 -> 9 (this: 0x600003e1c000)
+ThreadSafeDatabase refcount increased: 9 -> 10 (this: 0x600003e1c000)
+ThreadSafeDatabase refcount decreased: 10 -> 9 (this: 0x600003e1c000)
+
+db.go:114 2025-01-01T15:15:48.363Z opened tenant/namespace: 'jason/kvfile_test/' -> ten='fdb.Tenant{tenant:(*fdb.tenant)(0xc0002022d8), db:fdb.Database{clusterFile:"", isCached:true, database:(*fdb.database)(0xc00011a238)}}'
+ThreadSafeDatabase refcount increased: 9 -> 10 (this: 0x600003e1c000)
+ThreadSafeDatabase refcount increased: 10 -> 11 (this: 0x600003e1c000)
+ThreadSafeDatabase refcount decreased: 11 -> 10 (this: 0x600003e1c000)
+
+db.go:114 2025-01-01T15:15:48.368Z opened tenant/namespace: 'jason/kvfile_test/' -> ten='fdb.Tenant{tenant:(*fdb.tenant)(0xc000014258), db:fdb.Database{clusterFile:"", isCached:true, database:(*fdb.database)(0xc00011a238)}}'
+ThreadSafeDatabase refcount increased: 10 -> 11 (this: 0x600003e1c000)
+ThreadSafeDatabase refcount increased: 11 -> 12 (this: 0x600003e1c000)
+ThreadSafeDatabase refcount decreased: 12 -> 11 (this: 0x600003e1c000)
+
+db.go:114 2025-01-01T15:15:48.372Z opened tenant/namespace: 'jason/kvfile_test/' -> ten='fdb.Tenant{tenant:(*fdb.tenant)(0xc000014308), db:fdb.Database{clusterFile:"", isCached:true, database:(*fdb.database)(0xc00011a238)}}'
+ThreadSafeDatabase refcount increased: 11 -> 12 (this: 0x600003e1c000)
+ThreadSafeDatabase refcount increased: 12 -> 13 (this: 0x600003e1c000)
+ThreadSafeDatabase refcount decreased: 13 -> 12 (this: 0x600003e1c000)
+
+db.go:114 2025-01-01T15:15:48.417Z opened tenant/namespace: 'jason/kvfile_test/' -> ten='fdb.Tenant{tenant:(*fdb.tenant)(0xc000014388), db:fdb.Database{clusterFile:"", isCached:true, database:(*fdb.database)(0xc00011a238)}}'
+ThreadSafeDatabase refcount increased: 12 -> 13 (this: 0x600003e1c000)
+ThreadSafeDatabase refcount increased: 13 -> 14 (this: 0x600003e1c000)
+ThreadSafeDatabase refcount decreased: 14 -> 13 (this: 0x600003e1c000)
+
+db.go:114 2025-01-01T15:15:48.422Z opened tenant/namespace: 'jason/kvfile_test/' -> ten='fdb.Tenant{tenant:(*fdb.tenant)(0xc000014438), db:fdb.Database{clusterFile:"", isCached:true, database:(*fdb.database)(0xc00011a238)}}'
+ThreadSafeDatabase refcount increased: 13 -> 14 (this: 0x600003e1c000)
+ThreadSafeDatabase refcount increased: 14 -> 15 (this: 0x600003e1c000)
+ThreadSafeDatabase refcount decreased: 15 -> 14 (this: 0x600003e1c000)
+
+db.go:114 2025-01-01T15:15:48.467Z opened tenant/namespace: 'jason/kvfile_test/' -> ten='fdb.Tenant{tenant:(*fdb.tenant)(0xc00011a3a8), db:fdb.Database{clusterFile:"", isCached:true, database:(*fdb.database)(0xc00011a238)}}'
+ThreadSafeDatabase refcount increased: 14 -> 15 (this: 0x600003e1c000)
+ThreadSafeDatabase refcount increased: 15 -> 16 (this: 0x600003e1c000)
+ThreadSafeDatabase refcount decreased: 16 -> 15 (this: 0x600003e1c000)
+
+db.go:114 2025-01-01T15:15:48.470Z opened tenant/namespace: 'jason/kvfile_test/' -> ten='fdb.Tenant{tenant:(*fdb.tenant)(0xc00011a458), db:fdb.Database{clusterFile:"", isCached:true, database:(*fdb.database)(0xc00011a238)}}'
+ThreadSafeDatabase refcount increased: 15 -> 16 (this: 0x600003e1c000)
+ThreadSafeDatabase refcount increased: 16 -> 17 (this: 0x600003e1c000)
+ThreadSafeDatabase refcount decreased: 17 -> 16 (this: 0x600003e1c000)
+
+db.go:114 2025-01-01T15:15:48.507Z opened tenant/namespace: 'jason/kvfile_test/' -> ten='fdb.Tenant{tenant:(*fdb.tenant)(0xc00011a508), db:fdb.Database{clusterFile:"", isCached:true, database:(*fdb.database)(0xc00011a238)}}'
+ThreadSafeDatabase refcount increased: 16 -> 17 (this: 0x600003e1c000)
+ThreadSafeDatabase refcount increased: 17 -> 18 (this: 0x600003e1c000)
+ThreadSafeDatabase refcount decreased: 18 -> 17 (this: 0x600003e1c000)
+
+db.go:114 2025-01-01T15:15:48.513Z opened tenant/namespace: 'jason/kvfile_test/' -> ten='fdb.Tenant{tenant:(*fdb.tenant)(0xc0000144d8), db:fdb.Database{clusterFile:"", isCached:true, database:(*fdb.database)(0xc00011a238)}}'
+ThreadSafeDatabase refcount increased: 17 -> 18 (this: 0x600003e1c000)
+ThreadSafeDatabase refcount increased: 18 -> 19 (this: 0x600003e1c000)
+ThreadSafeDatabase refcount decreased: 19 -> 18 (this: 0x600003e1c000)
+
+db.go:114 2025-01-01T15:15:48.516Z opened tenant/namespace: 'jason/kvfile_test/' -> ten='fdb.Tenant{tenant:(*fdb.tenant)(0xc000014588), db:fdb.Database{clusterFile:"", isCached:true, database:(*fdb.database)(0xc00011a238)}}'
+ThreadSafeDatabase refcount increased: 18 -> 19 (this: 0x600003e1c000)
+ThreadSafeDatabase refcount increased: 19 -> 20 (this: 0x600003e1c000)
+ThreadSafeDatabase refcount decreased: 20 -> 19 (this: 0x600003e1c000)
+
+db.go:114 2025-01-01T15:15:48.562Z opened tenant/namespace: 'jason/kvfile_test/' -> ten='fdb.Tenant{tenant:(*fdb.tenant)(0xc0002023c8), db:fdb.Database{clusterFile:"", isCached:true, database:(*fdb.database)(0xc00011a238)}}'
+ThreadSafeDatabase refcount increased: 19 -> 20 (this: 0x600003e1c000)
+ThreadSafeDatabase refcount increased: 20 -> 21 (this: 0x600003e1c000)
+ThreadSafeDatabase refcount decreased: 21 -> 20 (this: 0x600003e1c000)
+
+db.go:114 2025-01-01T15:15:48.566Z opened tenant/namespace: 'jason/kvfile_test/' -> ten='fdb.Tenant{tenant:(*fdb.tenant)(0xc000202478), db:fdb.Database{clusterFile:"", isCached:true, database:(*fdb.database)(0xc00011a238)}}'
+ThreadSafeDatabase refcount increased: 20 -> 21 (this: 0x600003e1c000)
+ThreadSafeDatabase refcount increased: 21 -> 22 (this: 0x600003e1c000)
+ThreadSafeDatabase refcount decreased: 22 -> 21 (this: 0x600003e1c000)
+
+db.go:114 2025-01-01T15:15:48.613Z opened tenant/namespace: 'jason/kvfile_test/' -> ten='fdb.Tenant{tenant:(*fdb.tenant)(0xc000202528), db:fdb.Database{clusterFile:"", isCached:true, database:(*fdb.database)(0xc00011a238)}}'
+..
+db_test.go:46 2025-01-01T15:15:48.695Z endx = '6d795f66697273745f6b657900'
+..
+db_test.go:59 2025-01-01T15:15:48.727Z val222 = 'my_second_val'
+.
+db_test.go:68 2025-01-01T15:15:48.786Z val222 = 'my_second_val'
+
+db_test.go:75 2025-01-01T15:15:48.789Z kvs['my_second_key'] = 'my_second_val'
+..
+db_test.go:86 2025-01-01T15:15:48.845Z val22222 = ''
+
+db.go:46 2025-01-01T15:15:48.845Z about to close database 0 in the pool of 20
+ThreadSafeDatabase refcount decreased: 21 -> 20 (this: 0x600003e1c000)
+
+db.go:46 2025-01-01T15:15:48.845Z about to close database 1 in the pool of 20
+ThreadSafeDatabase refcount decreased: 20 -> 19 (this: 0x600003e1c000)
+
+db.go:46 2025-01-01T15:15:48.846Z about to close database 2 in the pool of 20
+ThreadSafeDatabase refcount decreased: 19 -> 18 (this: 0x600003e1c000)
+
+db.go:46 2025-01-01T15:15:48.846Z about to close database 3 in the pool of 20
+ThreadSafeDatabase refcount decreased: 18 -> 17 (this: 0x600003e1c000)
+
+db.go:46 2025-01-01T15:15:48.846Z about to close database 4 in the pool of 20
+ThreadSafeDatabase refcount decreased: 17 -> 16 (this: 0x600003e1c000)
+
+db.go:46 2025-01-01T15:15:48.846Z about to close database 5 in the pool of 20
+ThreadSafeDatabase refcount decreased: 16 -> 15 (this: 0x600003e1c000)
+
+db.go:46 2025-01-01T15:15:48.846Z about to close database 6 in the pool of 20
+ThreadSafeDatabase refcount decreased: 15 -> 14 (this: 0x600003e1c000)
+
+db.go:46 2025-01-01T15:15:48.863Z about to close database 7 in the pool of 20
+ThreadSafeDatabase refcount decreased: 14 -> 13 (this: 0x600003e1c000)
+
+db.go:46 2025-01-01T15:15:48.863Z about to close database 8 in the pool of 20
+ThreadSafeDatabase refcount decreased: 13 -> 12 (this: 0x600003e1c000)
+
+db.go:46 2025-01-01T15:15:48.863Z about to close database 9 in the pool of 20
+ThreadSafeDatabase refcount decreased: 12 -> 11 (this: 0x600003e1c000)
+
+db.go:46 2025-01-01T15:15:48.863Z about to close database 10 in the pool of 20
+ThreadSafeDatabase refcount decreased: 11 -> 10 (this: 0x600003e1c000)
+
+db.go:46 2025-01-01T15:15:48.863Z about to close database 11 in the pool of 20
+ThreadSafeDatabase refcount decreased: 10 -> 9 (this: 0x600003e1c000)
+
+db.go:46 2025-01-01T15:15:48.863Z about to close database 12 in the pool of 20
+ThreadSafeDatabase refcount decreased: 9 -> 8 (this: 0x600003e1c000)
+
+db.go:46 2025-01-01T15:15:48.863Z about to close database 13 in the pool of 20
+ThreadSafeDatabase refcount decreased: 8 -> 7 (this: 0x600003e1c000)
+
+db.go:46 2025-01-01T15:15:48.912Z about to close database 14 in the pool of 20
+ThreadSafeDatabase refcount decreased: 7 -> 6 (this: 0x600003e1c000)
+
+db.go:46 2025-01-01T15:15:48.912Z about to close database 15 in the pool of 20
+ThreadSafeDatabase refcount decreased: 6 -> 5 (this: 0x600003e1c000)
+
+db.go:46 2025-01-01T15:15:48.912Z about to close database 16 in the pool of 20
+ThreadSafeDatabase refcount decreased: 5 -> 4 (this: 0x600003e1c000)
+
+db.go:46 2025-01-01T15:15:48.912Z about to close database 17 in the pool of 20
+ThreadSafeDatabase refcount decreased: 4 -> 3 (this: 0x600003e1c000)
+
+db.go:46 2025-01-01T15:15:48.912Z about to close database 18 in the pool of 20
+ThreadSafeDatabase refcount decreased: 3 -> 2 (this: 0x600003e1c000)
+
+db.go:46 2025-01-01T15:15:48.912Z about to close database 19 in the pool of 20
+ThreadSafeDatabase refcount decreased: 2 -> 1 (this: 0x600003e1c000)
+
+7 assertions thus far
+
+--- PASS: Test001_fdb_set_and_get_single_keys (0.71s)
+=== RUN   Test002_read_kvfile_into_database
+ThreadSafeDatabase refcount increased: 1 -> 2 (this: 0x600003e3df20)
+ThreadSafeDatabase refcount increased: 2 -> 3 (this: 0x600003e3df20)
+ThreadSafeDatabase refcount decreased: 3 -> 2 (this: 0x600003e3df20)
+
+db.go:114 2025-01-01T15:15:48.979Z opened tenant/namespace: 'jason/kvfile_test/' -> ten='fdb.Tenant{tenant:(*fdb.tenant)(0xc00011a788), db:fdb.Database{clusterFile:"", isCached:true, database:(*fdb.database)(0xc0002028f0)}}'
+ThreadSafeDatabase refcount increased: 2 -> 3 (this: 0x600003e3df20)
+ThreadSafeDatabase refcount increased: 3 -> 4 (this: 0x600003e3df20)
+ThreadSafeDatabase refcount decreased: 4 -> 3 (this: 0x600003e3df20)
+
+db.go:114 2025-01-01T15:15:48.982Z opened tenant/namespace: 'jason/kvfile_test/' -> ten='fdb.Tenant{tenant:(*fdb.tenant)(0xc00011a838), db:fdb.Database{clusterFile:"", isCached:true, database:(*fdb.database)(0xc0002028f0)}}'
+ThreadSafeDatabase refcount increased: 3 -> 4 (this: 0x600003e3df20)
+ThreadSafeDatabase refcount increased: 4 -> 5 (this: 0x600003e3df20)
+ThreadSafeDatabase refcount decreased: 5 -> 4 (this: 0x600003e3df20)
+
+db.go:114 2025-01-01T15:15:49.022Z opened tenant/namespace: 'jason/kvfile_test/' -> ten='fdb.Tenant{tenant:(*fdb.tenant)(0xc000202948), db:fdb.Database{clusterFile:"", isCached:true, database:(*fdb.database)(0xc0002028f0)}}'
+ThreadSafeDatabase refcount increased: 4 -> 5 (this: 0x600003e3df20)
+ThreadSafeDatabase refcount increased: 5 -> 6 (this: 0x600003e3df20)
+ThreadSafeDatabase refcount decreased: 6 -> 5 (this: 0x600003e3df20)
+
+db.go:114 2025-01-01T15:15:49.027Z opened tenant/namespace: 'jason/kvfile_test/' -> ten='fdb.Tenant{tenant:(*fdb.tenant)(0xc000014708), db:fdb.Database{clusterFile:"", isCached:true, database:(*fdb.database)(0xc0002028f0)}}'
+ThreadSafeDatabase refcount increased: 5 -> 6 (this: 0x600003e3df20)
+ThreadSafeDatabase refcount increased: 6 -> 7 (this: 0x600003e3df20)
+ThreadSafeDatabase refcount decreased: 7 -> 6 (this: 0x600003e3df20)
+
+db.go:114 2025-01-01T15:15:49.031Z opened tenant/namespace: 'jason/kvfile_test/' -> ten='fdb.Tenant{tenant:(*fdb.tenant)(0xc0000147b8), db:fdb.Database{clusterFile:"", isCached:true, database:(*fdb.database)(0xc0002028f0)}}'
+ThreadSafeDatabase refcount increased: 6 -> 7 (this: 0x600003e3df20)
+ThreadSafeDatabase refcount increased: 7 -> 8 (this: 0x600003e3df20)
+ThreadSafeDatabase refcount decreased: 8 -> 7 (this: 0x600003e3df20)
+
+db.go:114 2025-01-01T15:15:49.044Z opened tenant/namespace: 'jason/kvfile_test/' -> ten='fdb.Tenant{tenant:(*fdb.tenant)(0xc000014868), db:fdb.Database{clusterFile:"", isCached:true, database:(*fdb.database)(0xc0002028f0)}}'
+ThreadSafeDatabase refcount increased: 7 -> 8 (this: 0x600003e3df20)
+ThreadSafeDatabase refcount increased: 8 -> 9 (this: 0x600003e3df20)
+ThreadSafeDatabase refcount decreased: 9 -> 8 (this: 0x600003e3df20)
+
+db.go:114 2025-01-01T15:15:49.048Z opened tenant/namespace: 'jason/kvfile_test/' -> ten='fdb.Tenant{tenant:(*fdb.tenant)(0xc000014918), db:fdb.Database{clusterFile:"", isCached:true, database:(*fdb.database)(0xc0002028f0)}}'
+ThreadSafeDatabase refcount increased: 8 -> 9 (this: 0x600003e3df20)
+ThreadSafeDatabase refcount increased: 9 -> 10 (this: 0x600003e3df20)
+ThreadSafeDatabase refcount decreased: 10 -> 9 (this: 0x600003e3df20)
+
+db.go:114 2025-01-01T15:15:49.101Z opened tenant/namespace: 'jason/kvfile_test/' -> ten='fdb.Tenant{tenant:(*fdb.tenant)(0xc0002029d8), db:fdb.Database{clusterFile:"", isCached:true, database:(*fdb.database)(0xc0002028f0)}}'
+
+db.go:260 2025-01-01T15:15:49.103Z out of 3101 pairs, kvs/jobs 0 got [0: 388)
+
+db.go:260 2025-01-01T15:15:49.103Z out of 3101 pairs, kvs/jobs 1 got [388: 776)
+
+db.go:260 2025-01-01T15:15:49.103Z out of 3101 pairs, kvs/jobs 2 got [776: 1164)
+
+db.go:260 2025-01-01T15:15:49.103Z out of 3101 pairs, kvs/jobs 3 got [1164: 1552)
+
+db.go:260 2025-01-01T15:15:49.103Z out of 3101 pairs, kvs/jobs 4 got [1552: 1940)
+
+db.go:260 2025-01-01T15:15:49.103Z out of 3101 pairs, kvs/jobs 5 got [1940: 2328)
+
+db.go:260 2025-01-01T15:15:49.103Z out of 3101 pairs, kvs/jobs 6 got [2328: 2716)
+
+db.go:260 2025-01-01T15:15:49.124Z out of 3101 pairs, kvs/jobs 7 got [2716: 3101)
+
+db.go:276 2025-01-01T15:15:49.124Z goro 3 starting with 388 jobs
+
+db.go:276 2025-01-01T15:15:49.124Z goro 0 starting with 388 jobs
+
+db.go:276 2025-01-01T15:15:49.125Z goro 1 starting with 388 jobs
+
+db.go:276 2025-01-01T15:15:49.125Z goro 7 starting with 385 jobs
+
+db.go:276 2025-01-01T15:15:49.125Z goro 4 starting with 388 jobs
+
+db.go:276 2025-01-01T15:15:49.126Z goro 6 starting with 388 jobs
+
+db.go:276 2025-01-01T15:15:49.126Z goro 2 starting with 388 jobs
+
+db.go:276 2025-01-01T15:15:49.127Z goro 5 starting with 388 jobs
+
+db.go:280 2025-01-01T15:15:50.202Z goro 6 done
+
+db.go:280 2025-01-01T15:15:50.202Z goro 4 done
+
+db.go:280 2025-01-01T15:15:50.231Z goro 7 done
+
+db.go:280 2025-01-01T15:15:50.231Z goro 0 done
+
+db.go:280 2025-01-01T15:15:50.231Z goro 1 done
+
+db.go:280 2025-01-01T15:15:50.231Z goro 3 done
+
+db.go:280 2025-01-01T15:15:50.261Z goro 5 done
+
+db.go:280 2025-01-01T15:15:50.262Z goro 2 done
+ThreadSafeDatabase refcount decreased: 1 -> 6 (this: 0x600003e1c000)  <<<< AH-HAH! the smoking gun.
+
+^^^^^ Realize: we are in the 2nd test here, but note the 0x600003e1c000 this address
+^^^^^ from the first test(!) Definitely a late firing finalizer -- they should never
+^^^^^ be used for memory cleanup.
+
+SIGSEGV: segmentation violation
+PC=0x10da08e03 m=9 sigcode=1 addr=0x421b87aec040
+signal arrived during cgo execution
+
+goroutine 18 gp=0xc000102700 m=9 mp=0xc000300008 [syscall]:
+runtime.cgocall(0x106ab7820, 0xc0000525a8)
+	/usr/local/go/src/runtime/cgocall.go:167 +0x4b fp=0xc000052580 sp=0xc000052548 pc=0x1069a842b
+github.com/apple/foundationdb/bindings/go/src/fdb._Cfunc_fdb_tenant_destroy(0x600002b1d9c0)
+	_cgo_gotypes.go:507 +0x3f fp=0xc0000525a8 sp=0xc000052580 pc=0x106a8e45f
+github.com/apple/foundationdb/bindings/go/src/fdb.(*tenant).destroy.func1(0xc000052690?)
+	/Users/jaten/go/pkg/mod/github.com/apple/foundationdb/bindings/go@v0.0.0-20241120003019-63035b5c3ecb/src/fdb/tenant.go:182 +0x3e fp=0xc0000525e8 sp=0xc0000525a8 pc=0x106a91b9e
+github.com/apple/foundationdb/bindings/go/src/fdb.(*tenant).destroy(0x0?)
+	/Users/jaten/go/pkg/mod/github.com/apple/foundationdb/bindings/go@v0.0.0-20241120003019-63035b5c3ecb/src/fdb/tenant.go:182 +0x19 fp=0xc000052600 sp=0xc0000525e8 pc=0x106a91b39
+runtime.call16(0x0, 0x106b43e28, 0xc00011a010, 0x10, 0x10, 0x10, 0xc000052690)
+	/usr/local/go/src/runtime/asm_amd64.s:775 +0x43 fp=0xc000052620 sp=0xc000052600 pc=0x1069b46c3
+runtime.runfinq()
+	/usr/local/go/src/runtime/mfinal.go:255 +0x3f1 fp=0xc0000527e0 sp=0xc000052620 pc=0x106956e11
+runtime.goexit({})
+	/usr/local/go/src/runtime/asm_amd64.s:1700 +0x1 fp=0xc0000527e8 sp=0xc0000527e0 pc=0x1069b61a1
+created by runtime.createfing in goroutine 1
+	/usr/local/go/src/runtime/mfinal.go:163 +0x3d
+
+goroutine 1 gp=0xc0000061c0 m=nil [chan receive]:
+runtime.gopark(0x20a0d0?, 0x106fcef28?, 0x18?, 0x0?, 0x106b1cb40?)
+	/usr/local/go/src/runtime/proc.go:424 +0xce fp=0xc0000629c8 sp=0xc0000629a8 pc=0x1069adeee
+runtime.chanrecv(0xc00022c070, 0xc000062aaf, 0x1)
+	/usr/local/go/src/runtime/chan.go:639 +0x41c fp=0xc000062a40 sp=0xc0000629c8 pc=0x106947c9c
+runtime.chanrecv1(0x106c64640?, 0x106b0cb80?)
+	/usr/local/go/src/runtime/chan.go:489 +0x12 fp=0xc000062a68 sp=0xc000062a40 pc=0x106947872
+testing.(*T).Run(0xc0001344e0, {0x106ac03be?, 0xbc7906000062b50?}, 0x106b437d8)
+	/usr/local/go/src/testing/testing.go:1751 +0x3ab fp=0xc000062b28 sp=0xc000062a68 pc=0x106a22e6b
+testing.runTests.func1(0xc0001344e0)
+	/usr/local/go/src/testing/testing.go:2168 +0x37 fp=0xc000062b68 sp=0xc000062b28 pc=0x106a250d7
+testing.tRunner(0xc0001344e0, 0xc000062c70)
+	/usr/local/go/src/testing/testing.go:1690 +0xf4 fp=0xc000062bb8 sp=0xc000062b68 pc=0x106a21fd4
+testing.runTests(0xc00013c030, {0x106c4c2e0, 0x6, 0x6}, {0x1069ac690?, 0x1069ac2fa?, 0x106c648e0?})
+	/usr/local/go/src/testing/testing.go:2166 +0x43d fp=0xc000062ca0 sp=0xc000062bb8 pc=0x106a24fbd
+testing.(*M).Run(0xc0001240a0)
+	/usr/local/go/src/testing/testing.go:2034 +0x64a fp=0xc000062ed0 sp=0xc000062ca0 pc=0x106a239ea
+main.main()
+	_testmain.go:75 +0x9b fp=0xc000062f50 sp=0xc000062ed0 pc=0x106ab713b
+runtime.main()
+	/usr/local/go/src/runtime/proc.go:272 +0x28b fp=0xc000062fe0 sp=0xc000062f50 pc=0x10697a1eb
+runtime.goexit({})
+	/usr/local/go/src/runtime/asm_amd64.s:1700 +0x1 fp=0xc000062fe8 sp=0xc000062fe0 pc=0x1069b61a1
+
+goroutine 2 gp=0xc000006c40 m=nil [force gc (idle)]:
+runtime.gopark(0x0?, 0x0?, 0x0?, 0x0?, 0x0?)
+	/usr/local/go/src/runtime/proc.go:424 +0xce fp=0xc000052fa8 sp=0xc000052f88 pc=0x1069adeee
+runtime.goparkunlock(...)
+	/usr/local/go/src/runtime/proc.go:430
+runtime.forcegchelper()
+	/usr/local/go/src/runtime/proc.go:337 +0xb3 fp=0xc000052fe0 sp=0xc000052fa8 pc=0x10697a533
+runtime.goexit({})
+	/usr/local/go/src/runtime/asm_amd64.s:1700 +0x1 fp=0xc000052fe8 sp=0xc000052fe0 pc=0x1069b61a1
+created by runtime.init.7 in goroutine 1
+	/usr/local/go/src/runtime/proc.go:325 +0x1a
+
+goroutine 3 gp=0xc000007180 m=nil [GC sweep wait]:
+runtime.gopark(0x1?, 0x0?, 0x0?, 0x0?, 0x0?)
+	/usr/local/go/src/runtime/proc.go:424 +0xce fp=0xc000053780 sp=0xc000053760 pc=0x1069adeee
+runtime.goparkunlock(...)
+	/usr/local/go/src/runtime/proc.go:430
+runtime.bgsweep(0xc00007e000)
+	/usr/local/go/src/runtime/mgcsweep.go:317 +0xdf fp=0xc0000537c8 sp=0xc000053780 pc=0x1069633ff
+runtime.gcenable.gowrap1()
+	/usr/local/go/src/runtime/mgc.go:203 +0x25 fp=0xc0000537e0 sp=0xc0000537c8 pc=0x106957b25
+runtime.goexit({})
+	/usr/local/go/src/runtime/asm_amd64.s:1700 +0x1 fp=0xc0000537e8 sp=0xc0000537e0 pc=0x1069b61a1
+created by runtime.gcenable in goroutine 1
+	/usr/local/go/src/runtime/mgc.go:203 +0x66
+
+goroutine 4 gp=0xc000007340 m=nil [GC scavenge wait]:
+runtime.gopark(0x10000?, 0x106af6848?, 0x0?, 0x0?, 0x0?)
+	/usr/local/go/src/runtime/proc.go:424 +0xce fp=0xc000053f78 sp=0xc000053f58 pc=0x1069adeee
+runtime.goparkunlock(...)
+	/usr/local/go/src/runtime/proc.go:430
+runtime.(*scavengerState).park(0x106c64ae0)
+	/usr/local/go/src/runtime/mgcscavenge.go:425 +0x49 fp=0xc000053fa8 sp=0xc000053f78 pc=0x106960dc9
+runtime.bgscavenge(0xc00007e000)
+	/usr/local/go/src/runtime/mgcscavenge.go:658 +0x59 fp=0xc000053fc8 sp=0xc000053fa8 pc=0x106961359
+runtime.gcenable.gowrap2()
+	/usr/local/go/src/runtime/mgc.go:204 +0x25 fp=0xc000053fe0 sp=0xc000053fc8 pc=0x106957ac5
+runtime.goexit({})
+	/usr/local/go/src/runtime/asm_amd64.s:1700 +0x1 fp=0xc000053fe8 sp=0xc000053fe0 pc=0x1069b61a1
+created by runtime.gcenable in goroutine 1
+	/usr/local/go/src/runtime/mgc.go:204 +0xa5
+
+goroutine 34 gp=0xc0001028c0 m=nil [runnable]:
+runtime.gopark(0x0?, 0x0?, 0xe0?, 0xc4?, 0xc0001812f8?)
+	/usr/local/go/src/runtime/proc.go:424 +0xce fp=0xc0001812b0 sp=0xc000181290 pc=0x1069adeee
+runtime.goparkunlock(...)
+	/usr/local/go/src/runtime/proc.go:430
+runtime.semacquire1(0xc00050224c, 0x0, 0x3, 0x1, 0x15)
+	/usr/local/go/src/runtime/sema.go:178 +0x225 fp=0xc000181318 sp=0xc0001812b0 pc=0x10698bc85
+sync.runtime_SemacquireMutex(0xc000181370?, 0x70?, 0xc000181390?)
+	/usr/local/go/src/runtime/sema.go:95 +0x25 fp=0xc000181350 sp=0xc000181318 pc=0x1069af1c5
+sync.(*Mutex).lockSlow(0xc000502248)
+	/usr/local/go/src/sync/mutex.go:173 +0x15d fp=0xc0001813a0 sp=0xc000181350 pc=0x1069befdd
+sync.(*Mutex).Lock(...)
+	/usr/local/go/src/sync/mutex.go:92
+github.com/apple/foundationdb/bindings/go/src/fdb.fdb_future_block_until_ready(0x7fe27280e0c0)
+	/Users/jaten/go/pkg/mod/github.com/apple/foundationdb/bindings/go@v0.0.0-20241120003019-63035b5c3ecb/src/fdb/futures.go:99 +0x85 fp=0xc0001813c8 sp=0xc0001813a0 pc=0x106a90785
+github.com/apple/foundationdb/bindings/go/src/fdb.(*future).BlockUntilReady(0x1?)
+	/Users/jaten/go/pkg/mod/github.com/apple/foundationdb/bindings/go@v0.0.0-20241120003019-63035b5c3ecb/src/fdb/futures.go:104 +0x4e fp=0xc000181408 sp=0xc0001813c8 pc=0x106a9092e
+github.com/apple/foundationdb/bindings/go/src/fdb.(*futureKeyValueArray).Get(0xc000504110)
+	/Users/jaten/go/pkg/mod/github.com/apple/foundationdb/bindings/go@v0.0.0-20241120003019-63035b5c3ecb/src/fdb/futures.go:287 +0x8e fp=0xc0001814c8 sp=0xc000181408 pc=0x106a910ee
+github.com/apple/foundationdb/bindings/go/src/fdb.(*RangeIterator).Advance(0xc000181580)
+	/Users/jaten/go/pkg/mod/github.com/apple/foundationdb/bindings/go@v0.0.0-20241120003019-63035b5c3ecb/src/fdb/range.go:221 +0x36 fp=0xc0001814e0 sp=0xc0001814c8 pc=0x106a8d3b6
+github.com/apple/foundationdb/bindings/go/src/fdb.RangeResult.GetSliceWithError({0xc0004a6150, {{0x106b45ae0, 0xc000214680}, {0x106b45ae0, 0xc0002146a0}}, {0x0, 0xffffffffffffffff, 0x0}, 0x0, 0xc000204128})
+	/Users/jaten/go/pkg/mod/github.com/apple/foundationdb/bindings/go@v0.0.0-20241120003019-63035b5c3ecb/src/fdb/range.go:146 +0x1b6 fp=0xc000181620 sp=0xc0001814e0 pc=0x106a8d2b6
+github.com/glycerine/fdb_demo_golang/kvfile.(*DBPool).ReadKVFileDBPath.func1({0x106b473c8, 0xc0004a6150})
+	/Users/jaten/go/src/github.com/glycerine/fdb_demo_golang/kvfile/db.go:353 +0xf8 fp=0xc000181760 sp=0xc000181620 pc=0x106ab0578
+github.com/apple/foundationdb/bindings/go/src/fdb.Tenant.ReadTransact.func1()
+	/Users/jaten/go/pkg/mod/github.com/apple/foundationdb/bindings/go@v0.0.0-20241120003019-63035b5c3ecb/src/fdb/tenant.go:277 +0x6b fp=0xc0001817c8 sp=0xc000181760 pc=0x106a9220b
+github.com/apple/foundationdb/bindings/go/src/fdb.retryable(0xc000181848, 0xc000181860)
+	/Users/jaten/go/pkg/mod/github.com/apple/foundationdb/bindings/go@v0.0.0-20241120003019-63035b5c3ecb/src/fdb/database.go:134 +0x2b fp=0xc000181820 sp=0xc0001817c8 pc=0x106a8f4cb
+github.com/apple/foundationdb/bindings/go/src/fdb.Tenant.ReadTransact({0xc00011a788, {{0x0, 0x0}, 0x1, 0xc0002028f0}}, 0xc000181948)
+	/Users/jaten/go/pkg/mod/github.com/apple/foundationdb/bindings/go@v0.0.0-20241120003019-63035b5c3ecb/src/fdb/tenant.go:286 +0x98 fp=0xc000181880 sp=0xc000181820 pc=0x106a92138
+github.com/glycerine/fdb_demo_golang/kvfile.(*DBPool).ReadKVFileDBPath(0xc000216600?, {0x106ab9d59, 0xb})
+	/Users/jaten/go/src/github.com/glycerine/fdb_demo_golang/kvfile/db.go:351 +0x1ec fp=0xc000181998 sp=0xc000181880 pc=0x106ab042c
+github.com/glycerine/fdb_demo_golang/kvfile.Test002_read_kvfile_into_database.func1()
+	/Users/jaten/go/src/github.com/glycerine/fdb_demo_golang/kvfile/db_test.go:124 +0x2e6 fp=0xc000181ae8 sp=0xc000181998 pc=0x106ab5fa6
+github.com/glycerine/goconvey/convey.discover.parseAction.func1({0x106ac36ed?, 0xc0002165d0?})
+	/Users/jaten/go/pkg/mod/github.com/glycerine/goconvey@v0.0.0-20190410193231-58a59202ab31/convey/discovery.go:80 +0x13 fp=0xc000181af8 sp=0xc000181ae8 pc=0x106aad953
+github.com/glycerine/goconvey/convey.(*context).conveyInner(0xc00021c480, {0x106ac36ed?, 0xea00000000000000?}, 0xc0002086a0)
+	/Users/jaten/go/pkg/mod/github.com/glycerine/goconvey@v0.0.0-20190410193231-58a59202ab31/convey/context.go:264 +0x13a fp=0xc000181b88 sp=0xc000181af8 pc=0x106aad07a
+github.com/glycerine/goconvey/convey.rootConvey.func1()
+	/Users/jaten/go/pkg/mod/github.com/glycerine/goconvey@v0.0.0-20190410193231-58a59202ab31/convey/context.go:113 +0xca fp=0xc000181c00 sp=0xc000181b88 pc=0x106aac7ca
+github.com/jtolds/gls.(*ContextManager).SetValues.func1(0x0)
+	/Users/jaten/go/pkg/mod/github.com/jtolds/gls@v4.20.0+incompatible/context.go:97 +0x47e fp=0xc000181d80 sp=0xc000181c00 pc=0x106aab27e
+github.com/jtolds/gls.EnsureGoroutineId.func1()
+	/Users/jaten/go/pkg/mod/github.com/jtolds/gls@v4.20.0+incompatible/gid.go:24 +0x1b fp=0xc000181d98 sp=0xc000181d80 pc=0x106aab6fb
+github.com/jtolds/gls._m(0x106b267a0?, 0xc000234501?)
+	/Users/jaten/go/pkg/mod/github.com/jtolds/gls@v4.20.0+incompatible/stack_tags.go:108 +0x1b fp=0xc000181db8 sp=0xc000181d98 pc=0x106aac0db
+github.com/jtolds/gls.github_com_jtolds_gls_markS(0x0?, 0x0?)
+	/Users/jaten/go/pkg/mod/github.com/jtolds/gls@v4.20.0+incompatible/stack_tags.go:56 +0x13 fp=0xc000181dd8 sp=0xc000181db8 pc=0x106aabc93
+github.com/jtolds/gls.addStackTag(...)
+	/Users/jaten/go/pkg/mod/github.com/jtolds/gls@v4.20.0+incompatible/stack_tags.go:49
+github.com/jtolds/gls.EnsureGoroutineId(0xc000216540)
+	/Users/jaten/go/pkg/mod/github.com/jtolds/gls@v4.20.0+incompatible/gid.go:24 +0xbd fp=0xc000181e28 sp=0xc000181dd8 pc=0x106aab67d
+github.com/jtolds/gls.(*ContextManager).SetValues(0xc00011c4d0, 0xc0002164e0, 0xc000214460)
+	/Users/jaten/go/pkg/mod/github.com/jtolds/gls@v4.20.0+incompatible/context.go:63 +0x157 fp=0xc000181e68 sp=0xc000181e28 pc=0x106aaadb7
+github.com/glycerine/goconvey/convey.rootConvey({0xc000234730?, 0x106b0cb80?, 0x106b44fa0?})
+	/Users/jaten/go/pkg/mod/github.com/glycerine/goconvey@v0.0.0-20190410193231-58a59202ab31/convey/context.go:108 +0x20b fp=0xc000181ee8 sp=0xc000181e68 pc=0x106aac68b
+github.com/glycerine/goconvey/convey.Convey({0xc000234730, 0x3, 0x3})
+	/Users/jaten/go/pkg/mod/github.com/glycerine/goconvey@v0.0.0-20190410193231-58a59202ab31/convey/doc.go:73 +0x86 fp=0xc000181f18 sp=0xc000181ee8 pc=0x106aad9e6
+github.com/glycerine/fdb_demo_golang/kvfile.Test002_read_kvfile_into_database(0xc00022e000?)
+	/Users/jaten/go/src/github.com/glycerine/fdb_demo_golang/kvfile/db_test.go:97 +0x65 fp=0xc000181f70 sp=0xc000181f18 pc=0x106ab4745
+testing.tRunner(0xc00022e000, 0x106b437d8)
+	/usr/local/go/src/testing/testing.go:1690 +0xf4 fp=0xc000181fc0 sp=0xc000181f70 pc=0x106a21fd4
+testing.(*T).Run.gowrap1()
+	/usr/local/go/src/testing/testing.go:1743 +0x25 fp=0xc000181fe0 sp=0xc000181fc0 pc=0x106a22fc5
+runtime.goexit({})
+	/usr/local/go/src/runtime/asm_amd64.s:1700 +0x1 fp=0xc000181fe8 sp=0xc000181fe0 pc=0x1069b61a1
+created by testing.(*T).Run in goroutine 1
+	/usr/local/go/src/testing/testing.go:1743 +0x390
+
+goroutine 20 gp=0xc000102a80 m=5 mp=0xc000100008 [syscall]:
+runtime.cgocall(0x106ab7420, 0xc00004e758)
+	/usr/local/go/src/runtime/cgocall.go:167 +0x4b fp=0xc00004e730 sp=0xc00004e6f8 pc=0x1069a842b
+github.com/apple/foundationdb/bindings/go/src/fdb._Cfunc_fdb_run_network()
+	_cgo_gotypes.go:455 +0x47 fp=0xc00004e758 sp=0xc00004e730 pc=0x106a8e207
+github.com/apple/foundationdb/bindings/go/src/fdb.startNetwork.func1()
+	/Users/jaten/go/pkg/mod/github.com/apple/foundationdb/bindings/go@v0.0.0-20241120003019-63035b5c3ecb/src/fdb/fdb.go:211 +0x17 fp=0xc00004e7e0 sp=0xc00004e758 pc=0x106a933b7
+runtime.goexit({})
+	/usr/local/go/src/runtime/asm_amd64.s:1700 +0x1 fp=0xc00004e7e8 sp=0xc00004e7e0 pc=0x1069b61a1
+created by github.com/apple/foundationdb/bindings/go/src/fdb.startNetwork in goroutine 19
+	/Users/jaten/go/pkg/mod/github.com/apple/foundationdb/bindings/go@v0.0.0-20241120003019-63035b5c3ecb/src/fdb/fdb.go:210 +0x4b
+
+goroutine 50 gp=0xc0002cc380 m=nil [GC worker (idle)]:
+runtime.gopark(0x0?, 0x0?, 0x0?, 0x0?, 0x0?)
+	/usr/local/go/src/runtime/proc.go:424 +0xce fp=0xc000230738 sp=0xc000230718 pc=0x1069adeee
+runtime.gcBgMarkWorker(0xc00056c000)
+	/usr/local/go/src/runtime/mgc.go:1363 +0xe9 fp=0xc0002307c8 sp=0xc000230738 pc=0x106959e49
+runtime.gcBgMarkStartWorkers.gowrap1()
+	/usr/local/go/src/runtime/mgc.go:1279 +0x25 fp=0xc0002307e0 sp=0xc0002307c8 pc=0x106959d25
+runtime.goexit({})
+	/usr/local/go/src/runtime/asm_amd64.s:1700 +0x1 fp=0xc0002307e8 sp=0xc0002307e0 pc=0x1069b61a1
+created by runtime.gcBgMarkStartWorkers in goroutine 34
+	/usr/local/go/src/runtime/mgc.go:1279 +0x105
+
+goroutine 51 gp=0xc000103180 m=nil [GC worker (idle)]:
+runtime.gopark(0x43ffafd74ad3?, 0x0?, 0x0?, 0x0?, 0x0?)
+	/usr/local/go/src/runtime/proc.go:424 +0xce fp=0xc000230f38 sp=0xc000230f18 pc=0x1069adeee
+runtime.gcBgMarkWorker(0xc00056c000)
+	/usr/local/go/src/runtime/mgc.go:1363 +0xe9 fp=0xc000230fc8 sp=0xc000230f38 pc=0x106959e49
+runtime.gcBgMarkStartWorkers.gowrap1()
+	/usr/local/go/src/runtime/mgc.go:1279 +0x25 fp=0xc000230fe0 sp=0xc000230fc8 pc=0x106959d25
+runtime.goexit({})
+	/usr/local/go/src/runtime/asm_amd64.s:1700 +0x1 fp=0xc000230fe8 sp=0xc000230fe0 pc=0x1069b61a1
+created by runtime.gcBgMarkStartWorkers in goroutine 34
+	/usr/local/go/src/runtime/mgc.go:1279 +0x105
+
+goroutine 52 gp=0xc000570000 m=nil [GC worker (idle)]:
+runtime.gopark(0x43ffafd754b0?, 0x0?, 0x0?, 0x0?, 0x0?)
+	/usr/local/go/src/runtime/proc.go:424 +0xce fp=0xc000231738 sp=0xc000231718 pc=0x1069adeee
+runtime.gcBgMarkWorker(0xc00056c000)
+	/usr/local/go/src/runtime/mgc.go:1363 +0xe9 fp=0xc0002317c8 sp=0xc000231738 pc=0x106959e49
+runtime.gcBgMarkStartWorkers.gowrap1()
+	/usr/local/go/src/runtime/mgc.go:1279 +0x25 fp=0xc0002317e0 sp=0xc0002317c8 pc=0x106959d25
+runtime.goexit({})
+	/usr/local/go/src/runtime/asm_amd64.s:1700 +0x1 fp=0xc0002317e8 sp=0xc0002317e0 pc=0x1069b61a1
+created by runtime.gcBgMarkStartWorkers in goroutine 34
+	/usr/local/go/src/runtime/mgc.go:1279 +0x105
+
+goroutine 53 gp=0xc0005701c0 m=nil [GC worker (idle)]:
+runtime.gopark(0x43ffafd7422c?, 0x0?, 0x0?, 0x0?, 0x0?)
+	/usr/local/go/src/runtime/proc.go:424 +0xce fp=0xc000231f38 sp=0xc000231f18 pc=0x1069adeee
+runtime.gcBgMarkWorker(0xc00056c000)
+	/usr/local/go/src/runtime/mgc.go:1363 +0xe9 fp=0xc000231fc8 sp=0xc000231f38 pc=0x106959e49
+runtime.gcBgMarkStartWorkers.gowrap1()
+	/usr/local/go/src/runtime/mgc.go:1279 +0x25 fp=0xc000231fe0 sp=0xc000231fc8 pc=0x106959d25
+runtime.goexit({})
+	/usr/local/go/src/runtime/asm_amd64.s:1700 +0x1 fp=0xc000231fe8 sp=0xc000231fe0 pc=0x1069b61a1
+created by runtime.gcBgMarkStartWorkers in goroutine 34
+	/usr/local/go/src/runtime/mgc.go:1279 +0x105
+
+goroutine 54 gp=0xc000570380 m=nil [GC worker (idle)]:
+runtime.gopark(0x43ffafd8944f?, 0x0?, 0x0?, 0x0?, 0x0?)
+	/usr/local/go/src/runtime/proc.go:424 +0xce fp=0xc000232738 sp=0xc000232718 pc=0x1069adeee
+runtime.gcBgMarkWorker(0xc00056c000)
+	/usr/local/go/src/runtime/mgc.go:1363 +0xe9 fp=0xc0002327c8 sp=0xc000232738 pc=0x106959e49
+runtime.gcBgMarkStartWorkers.gowrap1()
+	/usr/local/go/src/runtime/mgc.go:1279 +0x25 fp=0xc0002327e0 sp=0xc0002327c8 pc=0x106959d25
+runtime.goexit({})
+	/usr/local/go/src/runtime/asm_amd64.s:1700 +0x1 fp=0xc0002327e8 sp=0xc0002327e0 pc=0x1069b61a1
+created by runtime.gcBgMarkStartWorkers in goroutine 34
+	/usr/local/go/src/runtime/mgc.go:1279 +0x105
+
+goroutine 55 gp=0xc000570540 m=nil [GC worker (idle)]:
+runtime.gopark(0x106c85480?, 0x3?, 0xba?, 0x58?, 0x0?)
+	/usr/local/go/src/runtime/proc.go:424 +0xce fp=0xc000232f38 sp=0xc000232f18 pc=0x1069adeee
+runtime.gcBgMarkWorker(0xc00056c000)
+	/usr/local/go/src/runtime/mgc.go:1363 +0xe9 fp=0xc000232fc8 sp=0xc000232f38 pc=0x106959e49
+runtime.gcBgMarkStartWorkers.gowrap1()
+	/usr/local/go/src/runtime/mgc.go:1279 +0x25 fp=0xc000232fe0 sp=0xc000232fc8 pc=0x106959d25
+runtime.goexit({})
+	/usr/local/go/src/runtime/asm_amd64.s:1700 +0x1 fp=0xc000232fe8 sp=0xc000232fe0 pc=0x1069b61a1
+created by runtime.gcBgMarkStartWorkers in goroutine 34
+	/usr/local/go/src/runtime/mgc.go:1279 +0x105
+
+goroutine 56 gp=0xc000570700 m=nil [GC worker (idle)]:
+runtime.gopark(0x106c85480?, 0x1?, 0xfd?, 0xfe?, 0x0?)
+	/usr/local/go/src/runtime/proc.go:424 +0xce fp=0xc000233738 sp=0xc000233718 pc=0x1069adeee
+runtime.gcBgMarkWorker(0xc00056c000)
+	/usr/local/go/src/runtime/mgc.go:1363 +0xe9 fp=0xc0002337c8 sp=0xc000233738 pc=0x106959e49
+runtime.gcBgMarkStartWorkers.gowrap1()
+	/usr/local/go/src/runtime/mgc.go:1279 +0x25 fp=0xc0002337e0 sp=0xc0002337c8 pc=0x106959d25
+runtime.goexit({})
+	/usr/local/go/src/runtime/asm_amd64.s:1700 +0x1 fp=0xc0002337e8 sp=0xc0002337e0 pc=0x1069b61a1
+created by runtime.gcBgMarkStartWorkers in goroutine 34
+	/usr/local/go/src/runtime/mgc.go:1279 +0x105
+
+goroutine 57 gp=0xc0005708c0 m=nil [GC worker (idle)]:
+runtime.gopark(0x43ffafd72ed2?, 0x0?, 0x0?, 0x0?, 0x0?)
+	/usr/local/go/src/runtime/proc.go:424 +0xce fp=0xc000233f38 sp=0xc000233f18 pc=0x1069adeee
+runtime.gcBgMarkWorker(0xc00056c000)
+	/usr/local/go/src/runtime/mgc.go:1363 +0xe9 fp=0xc000233fc8 sp=0xc000233f38 pc=0x106959e49
+runtime.gcBgMarkStartWorkers.gowrap1()
+	/usr/local/go/src/runtime/mgc.go:1279 +0x25 fp=0xc000233fe0 sp=0xc000233fc8 pc=0x106959d25
+runtime.goexit({})
+	/usr/local/go/src/runtime/asm_amd64.s:1700 +0x1 fp=0xc000233fe8 sp=0xc000233fe0 pc=0x1069b61a1
+created by runtime.gcBgMarkStartWorkers in goroutine 34
+	/usr/local/go/src/runtime/mgc.go:1279 +0x105
+
+rax    0x421b87aec000
+rbx    0xc0000525a8
+rcx    0x1071611e0
+rdx    0x5
+rdi    0x600003e1c000
+rsi    0x4
+rbp    0x70000c28ede0
+rsp    0x70000c28edd0
+r8     0xc000300008
+r9     0x0
+r10    0x0
+r11    0x0
+r12    0x106a91b20
+r13    0x0
+r14    0xc000102700
+r15    0x0
+rip    0x10da08e03
+rflags 0x10202
+cs     0x2b
+fs     0x0
+gs     0x0
+exit status 2
+FAIL	github.com/glycerine/fdb_demo_golang/kvfile	4.530s
+
+Compilation exited abnormally with code 1 at Wed Jan  1 15:15:52
