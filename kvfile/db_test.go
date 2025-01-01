@@ -157,6 +157,9 @@ func Test002_read_kvfile_into_database(t *testing.T) {
 		// pool of 4
 		//db_test.go:134 2024-12-31T20:20:13.267-06:00 write acheived: 313.57 MB/sec in 943.112611ms
 
+		// pool of 8
+		// consistently crashes on a cgo signal.
+
 		//cv.So(reflect.DeepEqual(kv, kv2), cv.ShouldBeTrue)
 
 		panicOn(db.DeleteDBPath(path))
