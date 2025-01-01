@@ -1,0 +1,12 @@
+github.com/apple/foundationdb/bindings/go v0.0.0-20241120003019-63035b5c3ecb h1:0topddJgxrWdN/QiXhj5Njqy6J0Dm/IeF5bxzoW/RPw=
+github.com/apple/foundationdb/bindings/go v0.0.0-20241120003019-63035b5c3ecb/go.mod h1:OMVSB21p9+xQUIqlGizHPZfjK+SHws1ht+ZytVDoz9U=
+github.com/glycerine/fwd v1.1.4-beta.jea h1:penEwsXMBPCMCH+iUj/HKRIuRzfESzLIk99OcttgqTU=
+github.com/glycerine/fwd v1.1.4-beta.jea/go.mod h1:N5KPZnp8z9AaPcR/9r5u2BcdqnlfcTcEGbX1In/yyIE=
+github.com/glycerine/goconvey v0.0.0-20190410193231-58a59202ab31 h1:gclg6gY70GLy3PbkQ1AERPfmLMMagS60DKF78eWwLn8=
+github.com/glycerine/goconvey v0.0.0-20190410193231-58a59202ab31/go.mod h1:Ogl1Tioa0aV7gstGFO7KhffUsb9M4ydbEbbxpcEDc24=
+github.com/glycerine/greenpack v0.528.0 h1:HRt8OFv93WM2YLt/n1DBusaCN8MGv04SEQ8DDw2PH8k=
+github.com/glycerine/greenpack v0.528.0/go.mod h1:rDJGUPrlVMJ2UNwMzuCOD0CYjON7x+J8Kpp6Hwxx5Xc=
+github.com/gopherjs/gopherjs v1.17.2 h1:fQnZVsXk8uxXIStYb0N4bGk7jeyTalG/wsZjQ25dO0g=
+github.com/gopherjs/gopherjs v1.17.2/go.mod h1:pRRIvn/QzFLrKfvEz3qUuEhtE/zLCWfreZ6J5gM2i+k=
+github.com/jtolds/gls v4.20.0+incompatible h1:xdiiI2gbIgH/gLH7ADydsJ1uDOEzR8yvV7C0MuV77Wo=
+github.com/jtolds/gls v4.20.0+incompatible/go.mod h1:QJZ7F/aHp+rZTRtaJ1ow/lLfFfVYBRgL+9YlvaHOwJU=
