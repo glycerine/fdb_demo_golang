@@ -1,0 +1,358 @@
+jaten@Js-MacBook-Pro ~/go/src/github.com/glycerine/fdb_demo_golang/kvfile (master) $ go test -v
+=== RUN   Test001_fdb_set_and_get_single_keys
+..
+db_test.go:46 2025-01-01T02:42:50.202Z endx = '6d795f66697273745f6b657900'
+..
+db_test.go:59 2025-01-01T02:42:50.230Z val222 = 'my_second_val'
+.
+db_test.go:68 2025-01-01T02:42:50.256Z val222 = 'my_second_val'
+
+db_test.go:75 2025-01-01T02:42:50.258Z kvs['my_second_key'] = 'my_second_val'
+..
+db_test.go:86 2025-01-01T02:42:50.318Z val22222 = ''
+
+7 assertions thus far
+
+--- PASS: Test001_fdb_set_and_get_single_keys (0.20s)
+=== RUN   Test002_read_kvfile_into_database
+
+db.go:246 2025-01-01T02:42:50.338Z out of 3101 pairs, kvs/jobs 0 got [0: 388)
+
+db.go:246 2025-01-01T02:42:50.338Z out of 3101 pairs, kvs/jobs 1 got [388: 776)
+
+db.go:246 2025-01-01T02:42:50.338Z out of 3101 pairs, kvs/jobs 2 got [776: 1164)
+
+db.go:246 2025-01-01T02:42:50.338Z out of 3101 pairs, kvs/jobs 3 got [1164: 1552)
+
+db.go:246 2025-01-01T02:42:50.338Z out of 3101 pairs, kvs/jobs 4 got [1552: 1940)
+
+db.go:246 2025-01-01T02:42:50.338Z out of 3101 pairs, kvs/jobs 5 got [1940: 2328)
+
+db.go:246 2025-01-01T02:42:50.338Z out of 3101 pairs, kvs/jobs 6 got [2328: 2716)
+
+db.go:246 2025-01-01T02:42:50.338Z out of 3101 pairs, kvs/jobs 7 got [2716: 3101)
+
+db.go:262 2025-01-01T02:42:50.338Z goro 7 starting with 385 jobs
+
+db.go:262 2025-01-01T02:42:50.338Z goro 3 starting with 388 jobs
+
+db.go:262 2025-01-01T02:42:50.338Z goro 1 starting with 388 jobs
+
+db.go:262 2025-01-01T02:42:50.341Z goro 0 starting with 388 jobs
+
+db.go:262 2025-01-01T02:42:50.341Z goro 4 starting with 388 jobs
+
+db.go:262 2025-01-01T02:42:50.342Z goro 2 starting with 388 jobs
+
+db.go:262 2025-01-01T02:42:50.342Z goro 6 starting with 388 jobs
+
+db.go:262 2025-01-01T02:42:50.342Z goro 5 starting with 388 jobs
+
+db.go:266 2025-01-01T02:42:51.412Z goro 7 done
+
+db.go:266 2025-01-01T02:42:51.412Z goro 3 done
+
+db.go:266 2025-01-01T02:42:51.469Z goro 4 done
+
+db.go:266 2025-01-01T02:42:51.469Z goro 1 done
+
+db.go:266 2025-01-01T02:42:51.470Z goro 5 done
+
+db.go:266 2025-01-01T02:42:51.470Z goro 6 done
+
+db.go:266 2025-01-01T02:42:51.472Z goro 0 done
+
+db.go:266 2025-01-01T02:42:51.523Z goro 2 done
+SIGSEGV: segmentation violation
+PC=0x109b62a3d m=10 sigcode=1 addr=0x573d91a4c040
+signal arrived during cgo execution
+
+goroutine 5 gp=0xc000007c00 m=10 mp=0xc000380008 [syscall]:
+runtime.cgocall(0x1063e2820, 0xc0000565a8)
+	/usr/local/go/src/runtime/cgocall.go:167 +0x4b fp=0xc000056580 sp=0xc000056548 pc=0x1062d352b
+github.com/apple/foundationdb/bindings/go/src/fdb._Cfunc_fdb_tenant_destroy(0x600001dfc000)
+	_cgo_gotypes.go:507 +0x3f fp=0xc0000565a8 sp=0xc000056580 pc=0x1063b955f
+github.com/apple/foundationdb/bindings/go/src/fdb.(*tenant).destroy.func1(0xc000056690?)
+	/Users/jaten/go/pkg/mod/github.com/apple/foundationdb/bindings/go@v0.0.0-20241120003019-63035b5c3ecb/src/fdb/tenant.go:182 +0x3e fp=0xc0000565e8 sp=0xc0000565a8 pc=0x1063bcc9e
+github.com/apple/foundationdb/bindings/go/src/fdb.(*tenant).destroy(0x0?)
+	/Users/jaten/go/pkg/mod/github.com/apple/foundationdb/bindings/go@v0.0.0-20241120003019-63035b5c3ecb/src/fdb/tenant.go:182 +0x19 fp=0xc000056600 sp=0xc0000565e8 pc=0x1063bcc39
+runtime.call16(0x0, 0x10646ee28, 0xc000480000, 0x10, 0x10, 0x10, 0xc000056690)
+	/usr/local/go/src/runtime/asm_amd64.s:775 +0x43 fp=0xc000056620 sp=0xc000056600 pc=0x1062df7c3
+runtime.runfinq()
+	/usr/local/go/src/runtime/mfinal.go:255 +0x3f1 fp=0xc0000567e0 sp=0xc000056620 pc=0x106281f11
+runtime.goexit({})
+	/usr/local/go/src/runtime/asm_amd64.s:1700 +0x1 fp=0xc0000567e8 sp=0xc0000567e0 pc=0x1062e12a1
+created by runtime.createfing in goroutine 1
+	/usr/local/go/src/runtime/mfinal.go:163 +0x3d
+
+goroutine 1 gp=0xc0000061c0 m=nil [chan receive]:
+runtime.gopark(0x1860d0?, 0x106a61148?, 0x18?, 0x0?, 0x106447b40?)
+	/usr/local/go/src/runtime/proc.go:424 +0xce fp=0xc00006b9c8 sp=0xc00006b9a8 pc=0x1062d8fee
+runtime.chanrecv(0xc0001bc070, 0xc00006baaf, 0x1)
+	/usr/local/go/src/runtime/chan.go:639 +0x41c fp=0xc00006ba40 sp=0xc00006b9c8 pc=0x106272d9c
+runtime.chanrecv1(0x10658f640?, 0x106437b80?)
+	/usr/local/go/src/runtime/chan.go:489 +0x12 fp=0xc00006ba68 sp=0xc00006ba40 pc=0x106272972
+testing.(*T).Run(0xc0000a44e0, {0x1063eb3be?, 0x6dc5ce80006bb50?}, 0x10646e7d8)
+	/usr/local/go/src/testing/testing.go:1751 +0x3ab fp=0xc00006bb28 sp=0xc00006ba68 pc=0x10634df6b
+testing.runTests.func1(0xc0000a44e0)
+	/usr/local/go/src/testing/testing.go:2168 +0x37 fp=0xc00006bb68 sp=0xc00006bb28 pc=0x1063501d7
+testing.tRunner(0xc0000a44e0, 0xc00006bc70)
+	/usr/local/go/src/testing/testing.go:1690 +0xf4 fp=0xc00006bbb8 sp=0xc00006bb68 pc=0x10634d0d4
+testing.runTests(0xc000012060, {0x1065772e0, 0x6, 0x6}, {0x1062d7790?, 0x1062d73fa?, 0x10658f8e0?})
+	/usr/local/go/src/testing/testing.go:2166 +0x43d fp=0xc00006bca0 sp=0xc00006bbb8 pc=0x1063500bd
+testing.(*M).Run(0xc00009e0a0)
+	/usr/local/go/src/testing/testing.go:2034 +0x64a fp=0xc00006bed0 sp=0xc00006bca0 pc=0x10634eaea
+main.main()
+	_testmain.go:75 +0x9b fp=0xc00006bf50 sp=0xc00006bed0 pc=0x1063e213b
+runtime.main()
+	/usr/local/go/src/runtime/proc.go:272 +0x28b fp=0xc00006bfe0 sp=0xc00006bf50 pc=0x1062a52eb
+runtime.goexit({})
+	/usr/local/go/src/runtime/asm_amd64.s:1700 +0x1 fp=0xc00006bfe8 sp=0xc00006bfe0 pc=0x1062e12a1
+
+goroutine 2 gp=0xc000006c40 m=nil [force gc (idle)]:
+runtime.gopark(0x0?, 0x0?, 0x0?, 0x0?, 0x0?)
+	/usr/local/go/src/runtime/proc.go:424 +0xce fp=0xc000056fa8 sp=0xc000056f88 pc=0x1062d8fee
+runtime.goparkunlock(...)
+	/usr/local/go/src/runtime/proc.go:430
+runtime.forcegchelper()
+	/usr/local/go/src/runtime/proc.go:337 +0xb3 fp=0xc000056fe0 sp=0xc000056fa8 pc=0x1062a5633
+runtime.goexit({})
+	/usr/local/go/src/runtime/asm_amd64.s:1700 +0x1 fp=0xc000056fe8 sp=0xc000056fe0 pc=0x1062e12a1
+created by runtime.init.7 in goroutine 1
+	/usr/local/go/src/runtime/proc.go:325 +0x1a
+
+goroutine 3 gp=0xc000007180 m=nil [GC sweep wait]:
+runtime.gopark(0x1?, 0x0?, 0x0?, 0x0?, 0x0?)
+	/usr/local/go/src/runtime/proc.go:424 +0xce fp=0xc000057780 sp=0xc000057760 pc=0x1062d8fee
+runtime.goparkunlock(...)
+	/usr/local/go/src/runtime/proc.go:430
+runtime.bgsweep(0xc000082000)
+	/usr/local/go/src/runtime/mgcsweep.go:317 +0xdf fp=0xc0000577c8 sp=0xc000057780 pc=0x10628e4ff
+runtime.gcenable.gowrap1()
+	/usr/local/go/src/runtime/mgc.go:203 +0x25 fp=0xc0000577e0 sp=0xc0000577c8 pc=0x106282c25
+runtime.goexit({})
+	/usr/local/go/src/runtime/asm_amd64.s:1700 +0x1 fp=0xc0000577e8 sp=0xc0000577e0 pc=0x1062e12a1
+created by runtime.gcenable in goroutine 1
+	/usr/local/go/src/runtime/mgc.go:203 +0x66
+
+goroutine 4 gp=0xc000007340 m=nil [GC scavenge wait]:
+runtime.gopark(0x10000?, 0x106421838?, 0x0?, 0x0?, 0x0?)
+	/usr/local/go/src/runtime/proc.go:424 +0xce fp=0xc000057f78 sp=0xc000057f58 pc=0x1062d8fee
+runtime.goparkunlock(...)
+	/usr/local/go/src/runtime/proc.go:430
+runtime.(*scavengerState).park(0x10658fae0)
+	/usr/local/go/src/runtime/mgcscavenge.go:425 +0x49 fp=0xc000057fa8 sp=0xc000057f78 pc=0x10628bec9
+runtime.bgscavenge(0xc000082000)
+	/usr/local/go/src/runtime/mgcscavenge.go:658 +0x59 fp=0xc000057fc8 sp=0xc000057fa8 pc=0x10628c459
+runtime.gcenable.gowrap2()
+	/usr/local/go/src/runtime/mgc.go:204 +0x25 fp=0xc000057fe0 sp=0xc000057fc8 pc=0x106282bc5
+runtime.goexit({})
+	/usr/local/go/src/runtime/asm_amd64.s:1700 +0x1 fp=0xc000057fe8 sp=0xc000057fe0 pc=0x1062e12a1
+created by runtime.gcenable in goroutine 1
+	/usr/local/go/src/runtime/mgc.go:204 +0xa5
+
+goroutine 18 gp=0xc000007dc0 m=nil [runnable]:
+runtime.gopark(0x0?, 0x0?, 0xa0?, 0x42?, 0xc0000d72f8?)
+	/usr/local/go/src/runtime/proc.go:424 +0xce fp=0xc0000d72b0 sp=0xc0000d7290 pc=0x1062d8fee
+runtime.goparkunlock(...)
+	/usr/local/go/src/runtime/proc.go:430
+runtime.semacquire1(0xc00011001c, 0x0, 0x3, 0x1, 0x15)
+	/usr/local/go/src/runtime/sema.go:178 +0x225 fp=0xc0000d7318 sp=0xc0000d72b0 pc=0x1062b6d85
+sync.runtime_SemacquireMutex(0xc0000d7370?, 0x70?, 0xc0000d7390?)
+	/usr/local/go/src/runtime/sema.go:95 +0x25 fp=0xc0000d7350 sp=0xc0000d7318 pc=0x1062da2c5
+sync.(*Mutex).lockSlow(0xc000110018)
+	/usr/local/go/src/sync/mutex.go:173 +0x15d fp=0xc0000d73a0 sp=0xc0000d7350 pc=0x1062ea0dd
+sync.(*Mutex).Lock(...)
+	/usr/local/go/src/sync/mutex.go:92
+github.com/apple/foundationdb/bindings/go/src/fdb.fdb_future_block_until_ready(0x7fa5baf0dbc0)
+	/Users/jaten/go/pkg/mod/github.com/apple/foundationdb/bindings/go@v0.0.0-20241120003019-63035b5c3ecb/src/fdb/futures.go:99 +0x85 fp=0xc0000d73c8 sp=0xc0000d73a0 pc=0x1063bb885
+github.com/apple/foundationdb/bindings/go/src/fdb.(*future).BlockUntilReady(0x1?)
+	/Users/jaten/go/pkg/mod/github.com/apple/foundationdb/bindings/go@v0.0.0-20241120003019-63035b5c3ecb/src/fdb/futures.go:104 +0x4e fp=0xc0000d7408 sp=0xc0000d73c8 pc=0x1063bba2e
+github.com/apple/foundationdb/bindings/go/src/fdb.(*futureKeyValueArray).Get(0xc00049a000)
+	/Users/jaten/go/pkg/mod/github.com/apple/foundationdb/bindings/go@v0.0.0-20241120003019-63035b5c3ecb/src/fdb/futures.go:287 +0x8e fp=0xc0000d74c8 sp=0xc0000d7408 pc=0x1063bc1ee
+github.com/apple/foundationdb/bindings/go/src/fdb.(*RangeIterator).Advance(0xc0000d7580)
+	/Users/jaten/go/pkg/mod/github.com/apple/foundationdb/bindings/go@v0.0.0-20241120003019-63035b5c3ecb/src/fdb/range.go:221 +0x36 fp=0xc0000d74e0 sp=0xc0000d74c8 pc=0x1063b84b6
+github.com/apple/foundationdb/bindings/go/src/fdb.RangeResult.GetSliceWithError({0xc000496180, {{0x106470ae0, 0xc000290080}, {0x106470ae0, 0xc0002900a0}}, {0x0, 0xffffffffffffffff, 0x0}, 0x0, 0xc0002b4050})
+	/Users/jaten/go/pkg/mod/github.com/apple/foundationdb/bindings/go@v0.0.0-20241120003019-63035b5c3ecb/src/fdb/range.go:146 +0x1b6 fp=0xc0000d7620 sp=0xc0000d74e0 pc=0x1063b83b6
+github.com/glycerine/fdb_demo_golang/kvfile.(*DBPool).ReadKVFileDBPath.func1({0x1064723c8, 0xc000496180})
+	/Users/jaten/go/src/github.com/glycerine/fdb_demo_golang/kvfile/db.go:339 +0xf8 fp=0xc0000d7760 sp=0xc0000d7620 pc=0x1063db538
+github.com/apple/foundationdb/bindings/go/src/fdb.Tenant.ReadTransact.func1()
+	/Users/jaten/go/pkg/mod/github.com/apple/foundationdb/bindings/go@v0.0.0-20241120003019-63035b5c3ecb/src/fdb/tenant.go:277 +0x6b fp=0xc0000d77c8 sp=0xc0000d7760 pc=0x1063bd30b
+github.com/apple/foundationdb/bindings/go/src/fdb.retryable(0xc0000d7848, 0xc0000d7860)
+	/Users/jaten/go/pkg/mod/github.com/apple/foundationdb/bindings/go@v0.0.0-20241120003019-63035b5c3ecb/src/fdb/database.go:134 +0x2b fp=0xc0000d7820 sp=0xc0000d77c8 pc=0x1063ba5cb
+github.com/apple/foundationdb/bindings/go/src/fdb.Tenant.ReadTransact({0xc000180a30, {{0x0, 0x0}, 0x1, 0xc0001809c0}}, 0xc0000d7948)
+	/Users/jaten/go/pkg/mod/github.com/apple/foundationdb/bindings/go@v0.0.0-20241120003019-63035b5c3ecb/src/fdb/tenant.go:286 +0x98 fp=0xc0000d7880 sp=0xc0000d7820 pc=0x1063bd238
+github.com/glycerine/fdb_demo_golang/kvfile.(*DBPool).ReadKVFileDBPath(0xc000194570?, {0x1063e4d59, 0xb})
+	/Users/jaten/go/src/github.com/glycerine/fdb_demo_golang/kvfile/db.go:337 +0x1ec fp=0xc0000d7998 sp=0xc0000d7880 pc=0x1063db3ec
+github.com/glycerine/fdb_demo_golang/kvfile.Test002_read_kvfile_into_database.func1()
+	/Users/jaten/go/src/github.com/glycerine/fdb_demo_golang/kvfile/db_test.go:121 +0x2e6 fp=0xc0000d7ae8 sp=0xc0000d7998 pc=0x1063e0f66
+github.com/glycerine/goconvey/convey.discover.parseAction.func1({0x1063ee697?, 0xc000194540?})
+	/Users/jaten/go/pkg/mod/github.com/glycerine/goconvey@v0.0.0-20190410193231-58a59202ab31/convey/discovery.go:80 +0x13 fp=0xc0000d7af8 sp=0xc0000d7ae8 pc=0x1063d8a53
+github.com/glycerine/goconvey/convey.(*context).conveyInner(0xc0001906c0, {0x1063ee697?, 0x4100000000000000?}, 0xc000184250)
+	/Users/jaten/go/pkg/mod/github.com/glycerine/goconvey@v0.0.0-20190410193231-58a59202ab31/convey/context.go:264 +0x13a fp=0xc0000d7b88 sp=0xc0000d7af8 pc=0x1063d817a
+github.com/glycerine/goconvey/convey.rootConvey.func1()
+	/Users/jaten/go/pkg/mod/github.com/glycerine/goconvey@v0.0.0-20190410193231-58a59202ab31/convey/context.go:113 +0xca fp=0xc0000d7c00 sp=0xc0000d7b88 pc=0x1063d78ca
+github.com/jtolds/gls.(*ContextManager).SetValues.func1(0x0)
+	/Users/jaten/go/pkg/mod/github.com/jtolds/gls@v4.20.0+incompatible/context.go:97 +0x47e fp=0xc0000d7d80 sp=0xc0000d7c00 pc=0x1063d637e
+github.com/jtolds/gls.EnsureGoroutineId.func1()
+	/Users/jaten/go/pkg/mod/github.com/jtolds/gls@v4.20.0+incompatible/gid.go:24 +0x1b fp=0xc0000d7d98 sp=0xc0000d7d80 pc=0x1063d67fb
+github.com/jtolds/gls._m(0x1064517a0?, 0xc000052501?)
+	/Users/jaten/go/pkg/mod/github.com/jtolds/gls@v4.20.0+incompatible/stack_tags.go:108 +0x1b fp=0xc0000d7db8 sp=0xc0000d7d98 pc=0x1063d71db
+github.com/jtolds/gls.github_com_jtolds_gls_markS(0x0?, 0x0?)
+	/Users/jaten/go/pkg/mod/github.com/jtolds/gls@v4.20.0+incompatible/stack_tags.go:56 +0x13 fp=0xc0000d7dd8 sp=0xc0000d7db8 pc=0x1063d6d93
+github.com/jtolds/gls.addStackTag(...)
+	/Users/jaten/go/pkg/mod/github.com/jtolds/gls@v4.20.0+incompatible/stack_tags.go:49
+github.com/jtolds/gls.EnsureGoroutineId(0xc0001944b0)
+	/Users/jaten/go/pkg/mod/github.com/jtolds/gls@v4.20.0+incompatible/gid.go:24 +0xbd fp=0xc0000d7e28 sp=0xc0000d7dd8 pc=0x1063d677d
+github.com/jtolds/gls.(*ContextManager).SetValues(0xc00002a530, 0xc000194450, 0xc000192260)
+	/Users/jaten/go/pkg/mod/github.com/jtolds/gls@v4.20.0+incompatible/context.go:63 +0x157 fp=0xc0000d7e68 sp=0xc0000d7e28 pc=0x1063d5eb7
+github.com/glycerine/goconvey/convey.rootConvey({0xc000052730?, 0x106437b80?, 0x10646ffa0?})
+	/Users/jaten/go/pkg/mod/github.com/glycerine/goconvey@v0.0.0-20190410193231-58a59202ab31/convey/context.go:108 +0x20b fp=0xc0000d7ee8 sp=0xc0000d7e68 pc=0x1063d778b
+github.com/glycerine/goconvey/convey.Convey({0xc000052730, 0x3, 0x3})
+	/Users/jaten/go/pkg/mod/github.com/glycerine/goconvey@v0.0.0-20190410193231-58a59202ab31/convey/doc.go:73 +0x86 fp=0xc0000d7f18 sp=0xc0000d7ee8 pc=0x1063d8ae6
+github.com/glycerine/fdb_demo_golang/kvfile.Test002_read_kvfile_into_database(0xc0001be000?)
+	/Users/jaten/go/src/github.com/glycerine/fdb_demo_golang/kvfile/db_test.go:94 +0x65 fp=0xc0000d7f70 sp=0xc0000d7f18 pc=0x1063df705
+testing.tRunner(0xc0001be000, 0x10646e7d8)
+	/usr/local/go/src/testing/testing.go:1690 +0xf4 fp=0xc0000d7fc0 sp=0xc0000d7f70 pc=0x10634d0d4
+testing.(*T).Run.gowrap1()
+	/usr/local/go/src/testing/testing.go:1743 +0x25 fp=0xc0000d7fe0 sp=0xc0000d7fc0 pc=0x10634e0c5
+runtime.goexit({})
+	/usr/local/go/src/runtime/asm_amd64.s:1700 +0x1 fp=0xc0000d7fe8 sp=0xc0000d7fe0 pc=0x1062e12a1
+created by testing.(*T).Run in goroutine 1
+	/usr/local/go/src/testing/testing.go:1743 +0x390
+
+goroutine 7 gp=0xc0000d4000 m=5 mp=0xc000100008 [syscall]:
+runtime.cgocall(0x1063e2420, 0xc000058758)
+	/usr/local/go/src/runtime/cgocall.go:167 +0x4b fp=0xc000058730 sp=0xc0000586f8 pc=0x1062d352b
+github.com/apple/foundationdb/bindings/go/src/fdb._Cfunc_fdb_run_network()
+	_cgo_gotypes.go:455 +0x47 fp=0xc000058758 sp=0xc000058730 pc=0x1063b9307
+github.com/apple/foundationdb/bindings/go/src/fdb.startNetwork.func1()
+	/Users/jaten/go/pkg/mod/github.com/apple/foundationdb/bindings/go@v0.0.0-20241120003019-63035b5c3ecb/src/fdb/fdb.go:211 +0x17 fp=0xc0000587e0 sp=0xc000058758 pc=0x1063be4b7
+runtime.goexit({})
+	/usr/local/go/src/runtime/asm_amd64.s:1700 +0x1 fp=0xc0000587e8 sp=0xc0000587e0 pc=0x1062e12a1
+created by github.com/apple/foundationdb/bindings/go/src/fdb.startNetwork in goroutine 6
+	/Users/jaten/go/pkg/mod/github.com/apple/foundationdb/bindings/go@v0.0.0-20241120003019-63035b5c3ecb/src/fdb/fdb.go:210 +0x4b
+
+goroutine 34 gp=0xc0001aac40 m=nil [GC worker (idle)]:
+runtime.gopark(0x0?, 0x0?, 0x0?, 0x0?, 0x0?)
+	/usr/local/go/src/runtime/proc.go:424 +0xce fp=0xc000622738 sp=0xc000622718 pc=0x1062d8fee
+runtime.gcBgMarkWorker(0xc0004f8000)
+	/usr/local/go/src/runtime/mgc.go:1363 +0xe9 fp=0xc0006227c8 sp=0xc000622738 pc=0x106284f49
+runtime.gcBgMarkStartWorkers.gowrap1()
+	/usr/local/go/src/runtime/mgc.go:1279 +0x25 fp=0xc0006227e0 sp=0xc0006227c8 pc=0x106284e25
+runtime.goexit({})
+	/usr/local/go/src/runtime/asm_amd64.s:1700 +0x1 fp=0xc0006227e8 sp=0xc0006227e0 pc=0x1062e12a1
+created by runtime.gcBgMarkStartWorkers in goroutine 18
+	/usr/local/go/src/runtime/mgc.go:1279 +0x105
+
+goroutine 35 gp=0xc0004fc000 m=nil [GC worker (idle)]:
+runtime.gopark(0x0?, 0x0?, 0x0?, 0x0?, 0x0?)
+	/usr/local/go/src/runtime/proc.go:424 +0xce fp=0xc000622f38 sp=0xc000622f18 pc=0x1062d8fee
+runtime.gcBgMarkWorker(0xc0004f8000)
+	/usr/local/go/src/runtime/mgc.go:1363 +0xe9 fp=0xc000622fc8 sp=0xc000622f38 pc=0x106284f49
+runtime.gcBgMarkStartWorkers.gowrap1()
+	/usr/local/go/src/runtime/mgc.go:1279 +0x25 fp=0xc000622fe0 sp=0xc000622fc8 pc=0x106284e25
+runtime.goexit({})
+	/usr/local/go/src/runtime/asm_amd64.s:1700 +0x1 fp=0xc000622fe8 sp=0xc000622fe0 pc=0x1062e12a1
+created by runtime.gcBgMarkStartWorkers in goroutine 18
+	/usr/local/go/src/runtime/mgc.go:1279 +0x105
+
+goroutine 36 gp=0xc0004fc1c0 m=nil [GC worker (idle)]:
+runtime.gopark(0x0?, 0x0?, 0x0?, 0x0?, 0x0?)
+	/usr/local/go/src/runtime/proc.go:424 +0xce fp=0xc000623738 sp=0xc000623718 pc=0x1062d8fee
+runtime.gcBgMarkWorker(0xc0004f8000)
+	/usr/local/go/src/runtime/mgc.go:1363 +0xe9 fp=0xc0006237c8 sp=0xc000623738 pc=0x106284f49
+runtime.gcBgMarkStartWorkers.gowrap1()
+	/usr/local/go/src/runtime/mgc.go:1279 +0x25 fp=0xc0006237e0 sp=0xc0006237c8 pc=0x106284e25
+runtime.goexit({})
+	/usr/local/go/src/runtime/asm_amd64.s:1700 +0x1 fp=0xc0006237e8 sp=0xc0006237e0 pc=0x1062e12a1
+created by runtime.gcBgMarkStartWorkers in goroutine 18
+	/usr/local/go/src/runtime/mgc.go:1279 +0x105
+
+goroutine 37 gp=0xc0004fc380 m=nil [GC worker (idle)]:
+runtime.gopark(0x0?, 0x0?, 0x0?, 0x0?, 0x0?)
+	/usr/local/go/src/runtime/proc.go:424 +0xce fp=0xc000623f38 sp=0xc000623f18 pc=0x1062d8fee
+runtime.gcBgMarkWorker(0xc0004f8000)
+	/usr/local/go/src/runtime/mgc.go:1363 +0xe9 fp=0xc000623fc8 sp=0xc000623f38 pc=0x106284f49
+runtime.gcBgMarkStartWorkers.gowrap1()
+	/usr/local/go/src/runtime/mgc.go:1279 +0x25 fp=0xc000623fe0 sp=0xc000623fc8 pc=0x106284e25
+runtime.goexit({})
+	/usr/local/go/src/runtime/asm_amd64.s:1700 +0x1 fp=0xc000623fe8 sp=0xc000623fe0 pc=0x1062e12a1
+created by runtime.gcBgMarkStartWorkers in goroutine 18
+	/usr/local/go/src/runtime/mgc.go:1279 +0x105
+
+goroutine 38 gp=0xc0004fc540 m=nil [GC worker (idle)]:
+runtime.gopark(0x1c8adbcf37f8?, 0x0?, 0x0?, 0x0?, 0x0?)
+	/usr/local/go/src/runtime/proc.go:424 +0xce fp=0xc000624738 sp=0xc000624718 pc=0x1062d8fee
+runtime.gcBgMarkWorker(0xc0004f8000)
+	/usr/local/go/src/runtime/mgc.go:1363 +0xe9 fp=0xc0006247c8 sp=0xc000624738 pc=0x106284f49
+runtime.gcBgMarkStartWorkers.gowrap1()
+	/usr/local/go/src/runtime/mgc.go:1279 +0x25 fp=0xc0006247e0 sp=0xc0006247c8 pc=0x106284e25
+runtime.goexit({})
+	/usr/local/go/src/runtime/asm_amd64.s:1700 +0x1 fp=0xc0006247e8 sp=0xc0006247e0 pc=0x1062e12a1
+created by runtime.gcBgMarkStartWorkers in goroutine 18
+	/usr/local/go/src/runtime/mgc.go:1279 +0x105
+
+goroutine 39 gp=0xc0004fc700 m=nil [GC worker (idle)]:
+runtime.gopark(0x1c8adbcf3fca?, 0x0?, 0x0?, 0x0?, 0x0?)
+	/usr/local/go/src/runtime/proc.go:424 +0xce fp=0xc000624f38 sp=0xc000624f18 pc=0x1062d8fee
+runtime.gcBgMarkWorker(0xc0004f8000)
+	/usr/local/go/src/runtime/mgc.go:1363 +0xe9 fp=0xc000624fc8 sp=0xc000624f38 pc=0x106284f49
+runtime.gcBgMarkStartWorkers.gowrap1()
+	/usr/local/go/src/runtime/mgc.go:1279 +0x25 fp=0xc000624fe0 sp=0xc000624fc8 pc=0x106284e25
+runtime.goexit({})
+	/usr/local/go/src/runtime/asm_amd64.s:1700 +0x1 fp=0xc000624fe8 sp=0xc000624fe0 pc=0x1062e12a1
+created by runtime.gcBgMarkStartWorkers in goroutine 18
+	/usr/local/go/src/runtime/mgc.go:1279 +0x105
+
+goroutine 40 gp=0xc0004fc8c0 m=nil [GC worker (idle)]:
+runtime.gopark(0x1c8adbcf40ff?, 0x0?, 0x0?, 0x0?, 0x0?)
+	/usr/local/go/src/runtime/proc.go:424 +0xce fp=0xc000625738 sp=0xc000625718 pc=0x1062d8fee
+runtime.gcBgMarkWorker(0xc0004f8000)
+	/usr/local/go/src/runtime/mgc.go:1363 +0xe9 fp=0xc0006257c8 sp=0xc000625738 pc=0x106284f49
+runtime.gcBgMarkStartWorkers.gowrap1()
+	/usr/local/go/src/runtime/mgc.go:1279 +0x25 fp=0xc0006257e0 sp=0xc0006257c8 pc=0x106284e25
+runtime.goexit({})
+	/usr/local/go/src/runtime/asm_amd64.s:1700 +0x1 fp=0xc0006257e8 sp=0xc0006257e0 pc=0x1062e12a1
+created by runtime.gcBgMarkStartWorkers in goroutine 18
+	/usr/local/go/src/runtime/mgc.go:1279 +0x105
+
+goroutine 41 gp=0xc0004fca80 m=nil [GC worker (idle)]:
+runtime.gopark(0x1c8adbcf3f50?, 0x0?, 0x0?, 0x0?, 0x0?)
+	/usr/local/go/src/runtime/proc.go:424 +0xce fp=0xc000625f38 sp=0xc000625f18 pc=0x1062d8fee
+runtime.gcBgMarkWorker(0xc0004f8000)
+	/usr/local/go/src/runtime/mgc.go:1363 +0xe9 fp=0xc000625fc8 sp=0xc000625f38 pc=0x106284f49
+runtime.gcBgMarkStartWorkers.gowrap1()
+	/usr/local/go/src/runtime/mgc.go:1279 +0x25 fp=0xc000625fe0 sp=0xc000625fc8 pc=0x106284e25
+runtime.goexit({})
+	/usr/local/go/src/runtime/asm_amd64.s:1700 +0x1 fp=0xc000625fe8 sp=0xc000625fe0 pc=0x1062e12a1
+created by runtime.gcBgMarkStartWorkers in goroutine 18
+	/usr/local/go/src/runtime/mgc.go:1279 +0x105
+
+rax    0x573d91a4c000
+rbx    0x106a21d80
+rcx    0x107647ac0
+rdx    0x1d4c
+rdi    0x6000008ec000
+rsi    0x7000121b7eb0
+rbp    0x7000121b7ee0
+rsp    0x7000121b7ea0
+r8     0xc000380008
+r9     0x0
+r10    0x0
+r11    0x0
+r12    0x107647b60
+r13    0x107647b00
+r14    0x600001dfc000
+r15    0x107647b40
+rip    0x109b62a3d
+rflags 0x10206
+cs     0x2b
+fs     0x0
+gs     0x0
+exit status 2
+FAIL	github.com/glycerine/fdb_demo_golang/kvfile	4.390s
+jaten@Js-MacBook-Pro ~/go/src/github.com/glycerine/fdb_demo_golang/kvfile (master) $
+
+go version go1.23.3 darwin/amd64
+
